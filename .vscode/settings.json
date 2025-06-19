@@ -1,0 +1,17 @@
+{
+    "ros.distro": "jazzy",
+    "python.autoComplete.extraPaths": [
+        "/home/paula/security_bot_ws/install/rosbot_xl_teleop/lib/python3.12/site-packages",
+        "/home/paula/security_bot_ws/install/rosbot_xl_gazebo/lib/python3.12/site-packages",
+        "/home/paula/security_bot_ws/install/rosbot_xl_bringup/lib/python3.12/site-packages",
+        "/home/paula/security_bot_ws/install/rosbot_xl_controller/lib/python3.12/site-packages",
+        "/opt/ros/jazzy/lib/python3.12/site-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/paula/security_bot_ws/install/rosbot_xl_teleop/lib/python3.12/site-packages",
+        "/home/paula/security_bot_ws/install/rosbot_xl_gazebo/lib/python3.12/site-packages",
+        "/home/paula/security_bot_ws/install/rosbot_xl_bringup/lib/python3.12/site-packages",
+        "/home/paula/security_bot_ws/install/rosbot_xl_controller/lib/python3.12/site-packages",
+        "/opt/ros/jazzy/lib/python3.12/site-packages"
+    ]
+}

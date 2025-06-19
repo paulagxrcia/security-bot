@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>rosbot_xl_controller</name>
+  <version>0.0.0</version>
+  <description>Hardware configuration for ROSbot XL</description>
+
+  <maintainer email="garciapaula297@gmail.com">paula</maintainer>
+
+  <license>TODO: License declaration</license>
+
+  <url type = "website">https://husarion.com</url>
+  <url type = "repository">https://github.com/husarion/rosbot_xl_ros</url>
+  <url type = "bugtracket">https://github.com/husarion/rosbot_xl/issues</url>
+
+  <exec_depend>ros2launch</exec_depend>
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+
+  <exec_depend>rosbot_xl_description</exec_depend>
+  <exec_depend>ros_components_description</exec_depend>
+  <exec_depend>rosbot_hardware_interfaces</exec_depend>
+  <exec_depend>mecanum_drive_controller</exec_depend>
+
+  <exec_depend>xacro</exec_depend>
+  <exec_depend>controller_manager</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>joint_state_broadcaster</exec_depend>
+  <exec_depend>imu_sensor_broadcaster</exec_depend>
+  <exec_depend>diff_drive_controller</exec_depend>
+
+  <test_depend>rclpy</test_depend>
+  <test_depend>python3-pytest</test_depend>
+  <test_depend>launch_pytest</test_depend>
+
+  <test_depend>sensor_msgs</test_depend>
+  <test_depend>nav_msgs</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

@@ -1,0 +1,13 @@
+train: /home/paula/security_bot_ws/src/yolo/train/images
+val: /home/paula/security_bot_ws/src/yolo/valid/images
+test: /home/paula/security_bot_ws/src/yolo/test/images
+
+nc: 4
+names: ['forklift', 'pallet', 'palletjack', 'person']
+
+roboflow:
+  workspace: pallets-and-people
+  project: pallets-people
+  version: 1
+  license: MIT
+  url: https://universe.roboflow.com/pallets-and-people/pallets-people/dataset/1

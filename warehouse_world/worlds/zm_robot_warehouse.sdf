@@ -1,0 +1,468 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sdf version="1.6">
+  <world name="default">
+    
+    <gravity>0 0 -9.8</gravity>
+    <physics default="0" name="default_physics" type="ode">
+      <max_step_size>0.005</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+
+
+    <plugin filename="gz-sim-contact-system" name="gz::sim::systems::Contact" />
+    <plugin filename="gz-sim-imu-system" name="gz::sim::systems::Imu" />
+    <plugin filename="gz-sim-physics-system" name="gz::sim::systems::Physics" />
+    <plugin filename="gz-sim-scene-broadcaster-system" name="gz::sim::systems::SceneBroadcaster" />
+    <plugin filename="gz-sim-sensors-system" name="gz::sim::systems::Sensors" />
+    <plugin filename="gz-sim-user-commands-system" name="gz::sim::systems::UserCommands" />
+    
+
+
+        <model name="aws_robomaker_warehouse_ShelfF_01_001">
+        <include>
+            <uri>model://aws_robomaker_warehouse_ShelfF_01</uri>
+        </include>
+        <pose frame="">-5.795143 -0.956635 0 0 0 0</pose>
+	</model>
+
+        <model name="aws_robomaker_warehouse_WallB_01_001">
+        <include>
+            <uri>model://aws_robomaker_warehouse_WallB_01</uri>
+        </include>
+        <pose frame="">0.0 0.0 0 0 0 0</pose>
+	</model>
+
+        <model name="aws_robomaker_warehouse_ShelfE_01_001">
+        <include>
+            <uri>model://aws_robomaker_warehouse_ShelfE_01</uri>
+        </include>
+        <pose frame="">4.73156 0.57943 0 0 0 0</pose>
+	</model>
+
+        <model name="aws_robomaker_warehouse_ShelfE_01_002">
+        <include>
+            <uri>model://aws_robomaker_warehouse_ShelfE_01</uri>
+        </include>
+        <pose frame="">4.73156 -4.827049 0 0 0 0</pose>
+	</model>
+        
+        <model name="aws_robomaker_warehouse_ShelfE_01_003">
+        <include>
+            <uri>model://aws_robomaker_warehouse_ShelfE_01</uri>
+        </include>
+        <pose frame="">4.73156 -8.6651 0 0 0 0</pose>
+	</model>
+
+        <model name="aws_robomaker_warehouse_ShelfD_01_001">
+        <include>
+            <uri>model://aws_robomaker_warehouse_ShelfD_01</uri>
+        </include>
+        <pose frame="">4.73156 -1.242668 0 0 0 0</pose>
+	</model>
+
+        <model name="aws_robomaker_warehouse_ShelfD_01_002">
+        <include>
+            <uri>model://aws_robomaker_warehouse_ShelfD_01</uri>
+        </include>
+        <pose frame="">4.73156 -3.038551 0 0 0 0</pose>
+	</model>
+
+        <model name="aws_robomaker_warehouse_ShelfD_01_003">
+        <include>
+            <uri>model://aws_robomaker_warehouse_ShelfD_01</uri>
+        </include>
+        <pose frame="">4.73156 -6.750542 0 0 0 0</pose>
+	</model>
+
+        <!--model name="aws_robomaker_warehouse_DeskC_01_001">
+        <include>
+            <uri>model://aws_robomaker_warehouse_DeskC_01</uri>
+        </include>
+        <pose frame="">-0.061684 6.135864 0 0 0 0</pose>
+	</model>
+
+        <model name="aws_robomaker_warehouse_DeskC_01_002">
+        <include>
+            <uri>model://aws_robomaker_warehouse_DeskC_01</uri>
+        </include>
+        <pose frame="">-0.061684 3.039 0 0 0 0</pose>
+	</model>
+
+        <model name="aws_robomaker_warehouse_DeskC_01_003">
+        <include>
+            <uri>model://aws_robomaker_warehouse_DeskC_01</uri>
+        </include>
+        <pose frame="">-0.061684 -6.6493 0 0 0 0</pose>
+	</model-->
+
+
+
+
+        <model name="aws_robomaker_warehouse_GroundB_01_001">
+        <include>
+            <uri>model://aws_robomaker_warehouse_GroundB_01</uri>
+        </include>
+        <pose frame="">0.0 0.0 -0.090092 0 0 0</pose>
+	      </model>
+       
+        <model name="aws_robomaker_warehouse_Lamp_01_005">
+        <include>
+            <uri>model://aws_robomaker_warehouse_Lamp_01</uri>
+        </include>
+        <pose frame="">0 0 -4 0 0 0</pose>
+	      </model>
+       
+	
+
+        <model name="aws_robomaker_warehouse_Bucket_01_020">
+        <include>
+            <uri>model://aws_robomaker_warehouse_Bucket_01</uri>
+        </include>
+        <pose frame="">0.433449 9.631706 0 0 0 -1.563161</pose>
+	      </model>
+
+        <model name="aws_robomaker_warehouse_Bucket_01_021">
+        <include>
+            <uri>model://aws_robomaker_warehouse_Bucket_01</uri>
+        </include>
+        <pose frame="">-1.8321 -6.3752 0 0 0 -1.563161</pose>
+	      </model>
+
+        <model name="aws_robomaker_warehouse_Bucket_01_022">
+        <include>
+            <uri>model://aws_robomaker_warehouse_Bucket_01</uri>
+        </include>
+        <pose frame="">0.433449 8.59 0 0 0 -1.563161</pose>
+	</model>
+
+  <model name='aws_robomaker_warehouse_ClutteringA_01_016'>
+        <include>
+            <uri>model://aws_robomaker_warehouse_ClutteringA_01</uri>
+        </include>
+        <pose frame=''>5.708138 8.616844 -0.017477 0 0 0</pose>
+	</model>
+
+      <model name='aws_robomaker_warehouse_ClutteringA_01_017'>
+        <include>
+            <uri>model://aws_robomaker_warehouse_ClutteringA_01</uri>
+        </include>
+        <pose frame=''>3.408638 8.616844 -0.017477 0 0 0</pose>
+	</model>
+
+      <model name='aws_robomaker_warehouse_ClutteringA_01_018'>
+        <include>
+            <uri>model://aws_robomaker_warehouse_ClutteringA_01</uri>
+        </include>
+        <pose frame=''>-1.491287 5.222435 -0.017477 0 0 -1.583185</pose>
+	</model>
+
+
+     <model name="aws_robomaker_warehouse_ClutteringC_01_027">
+        <include>
+            <uri>model://aws_robomaker_warehouse_ClutteringC_01</uri>
+        </include>
+        <pose frame="">3.324959 3.822449 -0.012064 0 0 1.563871</pose>
+	</model>
+
+     <model name="aws_robomaker_warehouse_ClutteringC_01_028">
+        <include>
+            <uri>model://aws_robomaker_warehouse_ClutteringC_01</uri>
+        </include>
+        <pose frame="">5.54171 3.816475 -0.015663 0 0 -1.583191</pose>
+	</model>
+
+     <model name="aws_robomaker_warehouse_ClutteringC_01_029">
+        <include>
+            <uri>model://aws_robomaker_warehouse_ClutteringC_01</uri>
+        </include>
+        <pose frame="">5.384239 6.137154 0 0 0 3.150000</pose>
+	</model>
+
+     <model name="aws_robomaker_warehouse_ClutteringC_01_030">
+        <include>
+            <uri>model://aws_robomaker_warehouse_ClutteringC_01</uri>
+        </include>
+        <pose frame="">3.236 6.137154 0 0 0 3.150000</pose>
+	</model>
+
+     <model name="aws_robomaker_warehouse_ClutteringC_01_031">
+        <include>
+            <uri>model://aws_robomaker_warehouse_ClutteringC_01</uri>
+        </include>
+        <pose frame="">-1.573677 2.301994 -0.015663 0 0 -3.133191</pose>
+	</model>
+
+     <model name="aws_robomaker_warehouse_ClutteringC_01_032">
+        <include>
+            <uri>model://aws_robomaker_warehouse_ClutteringC_01</uri>
+        </include>
+        <pose frame="">-1.2196 9.407 -0.015663 0 0 1.563871</pose>
+	</model>
+
+     <model name='aws_robomaker_warehouse_ClutteringD_01_005'>
+        <include>
+            <uri>model://aws_robomaker_warehouse_ClutteringD_01</uri>
+        </include>
+        <pose frame=''>-1.634682 -7.811813 -0.319559 0 0 0</pose>
+	</model>
+                                                 
+      <model name='aws_robomaker_warehouse_TrashCanC_01_002'>
+        <include>
+            <uri>model://aws_robomaker_warehouse_TrashCanC_01</uri>
+        </include>
+        <pose frame=''>-1.592441 7.715420 0 0 0 0</pose>
+	</model>
+
+
+      <model name='aws_robomaker_warehouse_PalletJackB_01_001'>
+        <include>
+            <uri>model://aws_robomaker_warehouse_PalletJackB_01</uri>
+        </include>
+        <pose frame=''>-0.276098 -9.481944 0.023266 0 0 0</pose>
+	</model>
+
+ 
+
+    	
+    <light name="Warehouse_CeilingLight_003" type="point">
+      <pose frame="">0 0 9 0 0 0</pose>
+      <diffuse>0.5 0.5 0.5 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>80</range>
+        <constant>0.3</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <cast_shadows>1</cast_shadows>
+      <direction>0.1 0.1 -1</direction>
+    </light>
+
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose frame=''>0 0 16.2659 -0 0.921795 -1.12701</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+
+  <model name="euro_pallet">
+    <link name="link">
+      <pose frame=''>1 2 0.075 0 0 0</pose>
+      <inertial>
+        <mass>20.0</mass>
+        <inertia>
+          <ixx>2.43</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1.10</iyy>
+          <iyz>0</iyz>
+          <izz>3.47</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <pose>0 0 0.1 0 0 0</pose>
+        <geometry>
+          <box>
+            <size> 1.2 0.8 0.15 </size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://pallet/meshes/pallet.dae</uri>
+            <scale>0.1 0.1 0.1</scale>
+          </mesh>
+        </geometry>
+          <material>
+          <ambient>0.8 0.52 0.25 1</ambient> 
+          <diffuse>0.8 0.52 0.25 1</diffuse> 
+          <specular>0.5 0.5 0.5 1</specular> 
+          <emissive>0 0 0 0</emissive>
+          </material>
+      </visual>
+    </link>
+  </model>
+
+    <model name="person_standing">
+      <link name="link">
+        <pose>0 2 0.9 0 0 0</pose> <!-- Pone a la persona en (x=0, y=2) y altura 0.9m -->
+
+        <inertial>
+          <mass>80.0</mass>
+          <inertia>
+            <ixx>24.88</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>25.73</iyy>
+            <iyz>0</iyz>
+            <izz>2.48</izz>
+          </inertia>
+        </inertial>
+
+        <!-- Colisión base (suelo) -->
+        <collision name="bottom">
+          <pose>0 0 0.01 0 0 0</pose> <!-- Centramos -->
+          <geometry>
+            <box>
+              <size>0.5 0.35 0.02</size> <!-- Base pequeña -->
+            </box>
+          </geometry>
+        </collision>
+
+        <!-- Colisión cuerpo (cilindro) -->
+        <collision name="person">
+          <pose>0 0 0.9 0 0 0</pose> <!-- Altura a la mitad del cilindro -->
+          <geometry>
+            <cylinder>
+              <radius>0.25</radius>
+              <length>1.8</length> <!-- Altura total de persona -->
+            </cylinder>
+          </geometry>
+        </collision>
+
+        <!-- Visual (el mesh del humano) -->
+        <visual name="visual">
+          <pose>0 0 0 0 0 0</pose> 
+          <geometry>
+            <mesh>
+              <uri>model://standing_male/meshes/standing.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+
+      </link>
+    </model>
+
+    <!-- <model name="casual_female">
+
+        <static>true</static>
+        <link name="link">
+            <collision name="box">
+                <pose>0 0 0.9 0 0 0</pose>
+                <geometry>
+                    <box>
+                        <size>0.76 0.33 1.77</size>
+                    </box>
+                </geometry>
+            </collision>
+            <visual name="visual">
+                <pose>0 0 0.02 0.04 0 0</pose>
+                <geometry>
+                    <mesh>
+                        <uri>model://casual_female/meshes/casual_female.dae</uri>
+                    </mesh>
+                </geometry>
+            </visual>
+        </link>
+    </model> -->
+
+
+   
+   </world>
+</sdf>
+
+ 
+
+
+    <!-- <script>
+        <trajectory id="0" type="walking">
+          <waypoint>
+            <time>0</time>
+            <pose>1 2 1 0 0 -1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>2</time>
+            <pose>1 -2 1 0 0 -1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>2.5</time>
+            <pose>1 -2 1 0 0 1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>7</time>
+            <pose>1 2 1 0 0 1.57</pose>
+          </waypoint>
+          <waypoint>
+            <time>7.5</time>
+            <pose>1 2 1 0 0 -1.57</pose>
+          </waypoint>
+        </trajectory>
+      </script> -->
+
+
+  <!-- <plugin name="trajectory" filename="libTrajectoryActorPlugin.so">
+    
+      <target>
+        5.1254
+        5.385326
+        1.0
+        1.570796
+        -0.0
+        3.141593
+      </target>
+    
+      <target>
+        5.3737
+        3.89311
+        1.0
+        1.570796
+        -0.0
+        3.141593
+      </target>
+
+      <velocity>1.0516294306711416</velocity>
+      <obstacle_margin>1.5</obstacle_margin>
+      <obstacle>servicebot</obstacle>
+
+   </plugin>
+
+    <plugin name="attach_model" filename="libAttachModelPlugin.so">
+       <link>
+         <link_name>human_94763_pose</link_name>
+         <model>
+           <model_name>human_94763_collision_model</model_name>
+         </model>
+       </link>
+    </plugin> -->
+
+    <!-- 
+      <model name="human_94763_collision_model">
+        <pose>0 0 0 0 0 0</pose>
+        <static>true</static>
+        <link name="link">
+            <collision name="link">
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                    <box>
+                        <size>0.44 1.62 0.60</size>
+                    </box>
+                </geometry>
+            </collision>
+        </link>
+    </model>
+
+    <actor name="human_94763">
+
+  <!-- Starting pose, nice for when the world is reset -->
+
+  <skin>
+    <filename>model://actor/meshes/SKIN_man_green_shirt.dae</filename>
+  </skin>
+
+  <animation name="animation">
+    <filename>model://actor/meshes/ANIMATION_standing.dae</filename>
+    <interpolate_x>true</interpolate_x>
+  </animation>
+
+  </actor> -->
+  
+
+</actor>
+
+    
+
+

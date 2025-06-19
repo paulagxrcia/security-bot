@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:macro name="camera_mount"
+    params="parent_link xyz rpy
+                       tf_prefix:=None
+                       camera_mount_angle_1:=0.0
+                       camera_mount_angle_2:=0.0">
+
+    <xacro:if value="${tf_prefix == 'None'}">
+      <xacro:property name="tf_prefix_ext" value="" />
+    </xacro:if>
+    <xacro:unless value="${tf_prefix == 'None'}">
+      <xacro:property name="tf_prefix_ext" value="${tf_prefix}_" />
+    </xacro:unless>
+
+    <!-- <joint name="${parent_link.rstrip('_link')}_to_${tf_prefix_ext}camera_mount_bot_joint"
+      type="fixed">
+      <origin xyz="${xyz}" rpy="${rpy}" />
+      <parent link="${parent_link}" />
+      <child link="${tf_prefix_ext}camera_mount_bot_link" />
+    </joint>
+
+    <link name="${tf_prefix_ext}camera_mount_bot_link">
+      <visual>
+        <geometry>
+          <mesh filename="package://rosbot_description/meshes/components/camera_mount_bot.dae"
+      scale="1 1 1" />
+        </geometry>
+        <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      </visual>
+      <collision>
+        <geometry>
+          <box size="0.0275 0.0275 0.023" />
+        </geometry>
+        <origin xyz="0.0 0.0 0.0115" rpy="0.0 0.0 0.0" />
+      </collision>
+    </link>
+
+    <joint name="${tf_prefix_ext}camera_mount_bot_to_${tf_prefix_ext}fixed_pole_link_joint"
+      type="fixed">
+      <origin xyz="0.0 0.0 0.016" rpy="0.0 ${camera_mount_angle_1} 0.0" />
+      <parent link="${tf_prefix_ext}camera_mount_bot_link" />
+      <child link="${tf_prefix_ext}fixed_pole_link" />
+    </joint> -->
+
+
+    <joint name="${parent_link.rstrip('_link')}_to_${tf_prefix_ext}camera_mount_bot_joint"
+      type="fixed">
+      <origin xyz="${xyz}" rpy="${rpy}" />
+      <parent link="${parent_link}" />
+      <child link="${tf_prefix_ext}fixed_pole_link" />
+    </joint>z
+
+    <link name="${tf_prefix_ext}fixed_pole_link">
+      <visual>
+        <origin xyz="0 0 0.15" rpy="0 0 0"/>
+        <geometry>
+          <cylinder radius="0.015" length="0.3"/>
+        </geometry>
+        <material name="black">
+          <color rgba="0.0 0.0 0.0 1.0"/>
+        </material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0.16" rpy="0 0 0"/>
+        <geometry>
+          <cylinder radius="0.015" length="0.1"/>
+        </geometry>
+      </collision>
+      <inertial>
+        <mass value="1.0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <inertia ixx="0.01" iyy="0.01" izz="0.01" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+    </link>
+
+    <link name="${tf_prefix_ext}extendable_pole_link">
+      <visual>
+        <origin xyz="0 0 0.15" rpy="0 0 0"/>
+        <geometry>
+          <cylinder radius="0.010" length="0.3"/>
+        </geometry>
+        <material name="black">
+          <color rgba="0.0 0.0 0.0 1.0"/>
+        </material>
+      </visual>
+      <inertial>
+        <mass value="0.5"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <inertia ixx="0.005" iyy="0.005" izz="0.005" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+    </link>
+
+    
+    <joint name="fixed_pole_link_to_extendable_pole_link_joint"
+      type="prismatic">
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 ${camera_mount_angle_1} 0.0" />
+      <parent link="${tf_prefix_ext}fixed_pole_link" />
+      <child link="${tf_prefix_ext}extendable_pole_link" />
+      <axis xyz="0 0 1"/>
+      <limit lower="0.0" upper="0.264" effort="10.0" velocity="0.1"/>
+    </joint>
+
+
+
+    <joint name="${tf_prefix_ext}camera_mount_mid_to_${tf_prefix_ext}camera_mount_top_joint"
+      type="fixed">
+      <origin xyz="0.0 0.0 0.3" rpy="0.0 ${camera_mount_angle_2} 0.0" />
+      <parent link="${tf_prefix_ext}extendable_pole_link" />
+      <child link="${tf_prefix_ext}camera_mount_top_link" />
+    </joint>
+
+    <link name="${tf_prefix_ext}camera_mount_top_link">
+      <visual>
+        <geometry>
+          <mesh filename="package://rosbot_description/meshes/components/camera_mount_top.dae"
+      scale="1 1 1" />
+        </geometry>
+        <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      </visual>
+      <collision>
+        <geometry>
+          <box size="0.023 0.023 0.025" />
+        </geometry>
+        <origin xyz="0.0 -0.00232 0.0065" rpy="0.0 0.0 0.0" />
+      </collision>
+    </link>
+
+    <joint name="${tf_prefix_ext}camera_mount_top_to_${tf_prefix_ext}camera_mount_joint"
+      type="fixed">
+      <origin xyz="0.0 -0.00232 0.019" rpy="0.0 0.0 0.0" />
+      <parent link="${tf_prefix_ext}camera_mount_top_link" />
+      <child link="${tf_prefix_ext}camera_mount_link" />
+    </joint>
+
+    <link name="${tf_prefix_ext}camera_mount_link" />
+
+
+
+  </xacro:macro>
+</robot>

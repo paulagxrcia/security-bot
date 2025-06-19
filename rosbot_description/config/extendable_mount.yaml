@@ -1,0 +1,27 @@
+# extendable_mount_controller:
+#   ros__parameters:
+#     type: forward_command_controller/ForwardCommandController
+#     joints:
+#       - fixed_pole_link_to_extendable_pole_link_joint
+#     interface_name: position
+#     command_interfaces: position
+
+
+# controller_manager:
+#   ros__parameters:
+#     update_rate: 100 #Hz
+
+
+extendable_mount_controller:
+
+  ros__parameters:
+    # type: forward_command_controller/ForwardCommandController
+    joints:
+      - fixed_pole_link_to_extendable_pole_link_joint
+    interface_name: 
+      - position
+    command_interfaces: 
+      - position
+    state_interfaces:
+      - position
+      - velocity
